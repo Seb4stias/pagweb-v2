@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="icon" href="fotos2/logo.jpg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:burlywood;
+            color: black;
+        }
+        header{
+            background-color: burlywood;
+            color: black;
+            text-align:center ;
+            padding: 1px;
+            margin: 1px;
+        }
+
+        .banner{
+            background-color: bisque;
+            text-align:center ;
+            padding: 20px;
+            margin: 20px;
+        }
+
+
+        table, td, th{
+            border: 1px solid brown;
+            border-collapse: collapse;
+
+        }
+
+        td, th{
+            padding: 10px;
+            text-align: center;
+            color: black;
+        }
+
+        .fotos, .formulario, .links {
+            background-color: burlywood;
+            display:flex;
+            flex-direction:column ;
+            margin: auto;
+            padding: 0;
+            border: 1px solid black;
+        }
+
+        .formulario{
+            display: flex;
+            flex-direction:column ;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .formulario input, .formulario textarea{
+            margin: 10px 0;
+            padding: 10px 0;
+            border: 1px solid whitesmoke;
+        }
+
+        .fotologo{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .item {
+            width: 50%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .links{
+            text-align: center;
+            padding: 10px;
+        }
+
+
+
+    </style>
+</body>
+
+<header>
+    <img src="fotos2/logo.jpg" alt="musica" width="30">
+    <a href="#tablas">tablas</a>>
+    <a href="#fotos">fotos</a>>
+    <a href="#links">links</a>>
+    <a href="#formulario">formulario</a>>
+</header>
+    
+
+<div class="banner">
+    <h1>nuestra pag de musica</h1>
+    <p>Nuestra pagina tiene mucho contenido de musica</p>
+</div>
+
+<hr>
+
+<section id="tablas" class="tablas">
+    <table>
+        <tr>
+            <td>artista</td>
+            <td>pais</td>
+            <td>disco</td>
+        </tr>
+        <tr>
+            <td>ysy-a</td>
+            <td>arg</td>
+            <td>antezana 247</td>
+        </tr>
+        <tr>
+            <td>duki</td>
+            <td>arg</td>
+            <td>ameri</td>
+        </tr>
+
+        <tr>
+            <td>kidd voodoo</td>
+            <td>cl</td>
+            <td>satirologia vol3</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+        <tr>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+            <td>¿¿¿¿????</td>
+        </tr>
+
+    </table>
+</section>
+<hr>
+
+
+<section id="fotos" class="fotos">
+    <h2>fotos de los albums</h2>
+    <p> fotos de los albums que mas les gusta</p>
+    <br>
+    <br>
+    <div class="fotologo">
+        <div class="item">
+            <li><strong>antezana 247</strong> antezana 247 deluxe-ysy a</li>
+            <img src="fotos2/antezana247.jpg" alt="antezana 247" width="300">
+        </div>
+        <div class="item">
+            <li><strong>ameri</strong>ameri-duki</li>
+            <img src="fotos2/ameri.jpg" alt="ameri" width="300">
+        </div>
+
+        <div class="item">
+            <li><strong>satirologia vol3</strong>satirologia vol3-kidd voodoo</li>
+            <img src="fotos2/sati.jpg" alt="satirologia" width="300">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="links" class="links">
+    <h2>links de los discos</h2>
+    <p>todos los links de los discos que salen aqui</p>
+
+    <br>
+    <br>
+    <nav>
+        <a href="https://open.spotify.com/intl-es/album/5tPDpnIZLtftbejuG6BllH">antezana247 <img src="fotos2/antezana247.jpg" alt="antezana247" width="50"></a>
+        <br>
+        <br>
+        <a href="https://open.spotify.com/intl-es/album/3rVk419T7ct4qoW52h2q2d">ameri <img src="fotos2/ameri.jpg" alt="ameri" width="50"></a>
+        <br>
+        <br>
+        <a href="https://open.spotify.com/intl-es/album/6n3yGfhOtfklDdHxcGYsel">satirologia <img src="fotos2/sati.jpg" alt="satirologia vol 3" width="50"></a>
+        <br>
+        <br>
+
+    </nav>
+</section>
+
+<section id="formulario" class="formulario">
+
+    <h2>contactanos</h2>
+    <p> contactanos si nuestra pag es super mala</p>
+
+    <label for="nombre">nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="alejo" required>
+
+    <label for="correo">correo</label>
+    <input type="email" id="correo" name="correo" placeholder="fandeestapag@gmail.com" required>
+
+    <label for="mensaje">mensaje</label>
+    <textarea name="mensaje" id="mensaje" placeholder="¡escriba su mensaje aqui!" required></textarea>
+
+    <button type="submit">enviar</button>
+</section>
+<br>
+<br>    
+<br>
+
+</html>

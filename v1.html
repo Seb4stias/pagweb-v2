@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="icon" href="fotos/logo.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        header{
+            background-color: bisque;
+            color:red;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav{
+            margin-top: 20px;
+        }
+
+        nav a{
+            margin: 0 15px;
+            color: black;
+            text-decoration:none;
+        }
+
+        .banner{
+            background-color: red;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .servicios, .nosotros, .contactanos{
+            background-color: red;
+            margin: 0;
+            padding: 0;
+            border: 1px solid red;
+        }
+
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .formulario input, .formulario textarea{
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid red;
+        }
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .item{
+            width: 50%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            
+        }
+
+        th, td{
+            padding: 10px;
+            text-align: left;
+            color: purple;
+           
+        }
+    </style>   
+</body>
+
+<header>
+    <img src="fotos/descarga.jpg" alt="Cocacola" width="200">
+    <nav>
+        <a href="#servicios">servicios</a>>
+        <a href="#nosotros">nosotros</a>>
+        <a href="#contactanos">contactanos</a>>
+        <a href="#tabla">tabla</a>>
+    </nav>
+</header>
+
+<div class="banner">
+    <h1>Nuestra empresa que para nada es coca-cola</h1>
+    <p>coca-cola. no nos demandes </p>
+</div>
+
+<section id="servicios" class="servicios">
+        <div class="container">
+
+            <div class="item">
+                <li><strong>agua</strong>nuestra agua</li>
+                <img src="fotos/descarga.jpg" alt="nuestra agua" width="300">
+            </div>
+
+            <div class="item">
+                <li><strong>nuestro servicio de despacho </strong>servicio de despacho </li>
+                <img src="fotos/camion.jpg" alt="despacho" width="300">
+            </div>
+
+            <div class="item">
+                <li><strong>nuestras galletas</strong>nuestras galletas</li>
+                <img src="fotos/galletas.jpg" alt="galletas" width="300">
+            </div>
+
+            <div class="item">
+                <li><strong>nuestra merch</strong>merch</li>
+                <img src="fotos/merch.jpg" alt="nuestra merch" width="300">
+            </div>
+
+            <div class="item">
+                <li><strong>diseños antiguos</strong>antiguos diseños</li>
+                <img src="fotos/antiguo.jpg" alt="nuestras botellas antiguas" width="300">
+            </div>
+
+            <div class="item">
+                <li><strong>fundador</strong>nuestro fundador</li>
+                <img src="fotos/fundador.jpg" alt="nuestro fundador" width="300">
+            </div>
+        </div>   
+</section>
+
+<hr>
+
+<section id="nosotros" class="nosotros">
+    <h2>nosotros</h2>
+    <p>este es el equipo de pepsi cola (copia barata de cocacola)</p>
+
+    <img src="fotos/equipo.jpg" alt="equipo amigo" width="300">
+    <p>este es nuestro equipo</p>
+</section>
+
+
+<section id="contactanos" class="contactanos">
+<h2>contacto</h2>
+<form class="formulario"></form>
+    <label for="nombre">nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="juan" required>
+    
+    <label class="correo">correo electronico:</label>
+    <input type="email" id="correo" name="correo" placeholder="example@gmail.com" required>
+
+
+    <label class="mensaje">mensaje:</label>
+    <input id="mensaje" name="mensaje" placeholder="ingrese su mensaje" required>
+
+    <button type="submit">enviar</button>
+</section>
+
+<hr>
+<h2>nuestras redes sociales</h2>
+<div class="icon">
+    <h3>nuestras redes sociales</h3>
+    <p>nuestras redes sociales po wn</p>
+
+    <a href="https://facebook.com"><img src="fotos/antiguo.jpg" alt="antiguo"></a>
+</div>
+
+<hr>
+<section id="tabla" class="tabla">  
+    <table>
+        <tr>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+
+        </tr>
+        <tr>
+            <td>bryan</td>
+            <td>belmar</td>
+            <td>bryan.micasa@gmail.com</td>
+        </tr>
+        <tr>
+            <td>cris</td>
+            <td>tejo</td>
+            <td>ctejos@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td>jano</td>
+            <td>rivadeneira</td>
+            <td>jrivadeneira@gmail.com</td>
+        </tr>
+    </table>
+
+
+</html>
