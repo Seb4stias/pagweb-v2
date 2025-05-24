@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiPlus Momo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .banner {
+            background-image: url('logoo.jpg'); 
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .services, .about, .contact {
+            padding: 20px;
+            text-align: center;
+        }
+        .service {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .service {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="de ServiPlus" width="100">
+    <nav> 
+        <a href="#services">Servicios</a>
+        <a href="#about">Nosotros</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Bienvenido a ServiPlus</h1>
+    <p>Tu aliado en servicios esenciales para una vida mejor.</p>
+</section>
+
+<section id="services" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service">
+        <img src="agua.jpg" alt="Icono" width="60">
+        <h3>Agua Potable</h3>
+        <p>Proporcionamos agua potable de calidad para tu hogar y negocio.</p>
+    </div>
+    <div class="service">
+        <img src="electricidad.jpg" alt=Icono width="69">
+        <h3>Electricidad</h3>
+        <p>Servicios de electricidad confiables y seguros.</p>
+    </div>
+    <div class="service">
+        <img src="trasporte.png" alt="Icono " width="69">
+        <h3>Transporte</h3>
+        <p>Soluciones de transporte eficientes para tu comodidad.</p>
+    </div>
+    <div class="service">
+        <img src="reciclar.png" alt="Icono de Reciclaje" width="51">
+        <h3>Reciclaje</h3>
+        <p>Comprometidos con el medio ambiente a través del reciclaje.</p>
+    </div>
+    <div class="service">
+        <img src="conectividad.png" alt="Icono " width="70">
+        <h3>Conectividad</h3>
+        <p>Servicios de internet y conectividad para todos.</p>
+    </div>
+    <div class="service">
+        <img src="mantenimiento.png" alt="Icono de Mantenimiento" width="50">
+        <h3>Mantenimiento</h3>
+        <p>Servicios de mantenimiento para asegurar el buen funcionamiento de tus instalaciones.</p>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>Nosotros</h2>
+    <img src="equipo.jpg" alt=" equipo de ServiPlus" width="300"> 
+    <p>En ServiPlus, nos dedicamos a ofrecer servicios esenciales que mejoran la calidad de
+        vida de nuestros clientes. Nuestro equipo está comprometido con la excelencia y la satisfacción del cliente, brindando soluciones efectivas y sostenibles en cada uno de nuestros servicios.</p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form action="#" method="post">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+
+<footer>
+    <p>Dirección: los espejos 21, Buenos Aires, Italia</p>
+    <p>Correo de contacto: contacto@serviplus.com</p>
+    <div>
+        <a href="https://facebook.com" target="_blank"><img src="facebook.svg" alt="Facebook" width="40"></a>
+        <a href="https://x.com" target="_blank"><img src="twitter.svg" alt="Twitter" width="30"></a>
+        <a href="https://instagram.com" target="_blank"><img src="instagram.svg" alt="Instagram" width="30"></a>
+    </div>
+</footer>
+
+</body>
+</html>

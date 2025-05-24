@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo dom 👹</title>
+    <style>
+        .formulario {
+            display: grid;
+            grid-template-columns: auto 1fr; /* Dos columnas: etiqueta y campo */
+            gap: 10px; /* Espacio entre filas y columnas */
+            width: 300px; /* Ancho del formulario */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .formulario label {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="number"],
+        .formulario input[type="email"],
+        .formulario select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box; /* Evita que el padding aumente el ancho */
+        }
+
+        .formulario .sexo-label {
+            grid-column: 1 / span 2; /* Ocupa ambas columnas */
+        }
+
+        .formulario .sexo-opciones {
+            grid-column: 2; /* Ocupa la segunda columna */
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .formulario .sexo-opciones input[type="checkbox"] {
+            width: auto; /* Ancho automático para los checkboxes */
+        }
+
+        .formulario button[type="submit"] {
+            grid-column: 1 / span 2; /* Ocupa ambas columnas para el botón */
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .formulario button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function crearFormulario() {
+            // Crear elemento form
+            var formulario = document.createElement("form");
+            formulario.className = "formulario"; // Añadir la clase al formulario
+
+            // -------------------- Campo Nombre --------------------
+            var labelNombre = document.createElement("label");
+            labelNombre.textContent = "Nombre:";
+            labelNombre.setAttribute("for", "nombre");
+            var inputNombre = document.createElement("input");
+            inputNombre.setAttribute("type", "text");
+            inputNombre.setAttribute("id", "nombre");
+            inputNombre.setAttribute("name", "nombre");
+            formulario.appendChild(labelNombre);
+            formulario.appendChild(inputNombre);
+
+            // -------------------- Campo RUT --------------------
+            var labelRUT = document.createElement("label");
+            labelRUT.textContent = "RUT:";
+            labelRUT.setAttribute("for", "rut");
+            var inputRUT = document.createElement("input");
+            inputRUT.setAttribute("type", "text");
+            inputRUT.setAttribute("id", "rut");
+            inputRUT.setAttribute("name", "rut");
+            formulario.appendChild(labelRUT);
+            formulario.appendChild(inputRUT);
+
+            // -------------------- Campo EDAD --------------------
+            var labelEdad = document.createElement("label");
+            labelEdad.textContent = "EDAD:";
+            labelEdad.setAttribute("for", "edad");
+            var inputEdad = document.createElement("input");
+            inputEdad.setAttribute("type", "number");
+            inputEdad.setAttribute("id", "edad");
+            inputEdad.setAttribute("name", "edad");
+            formulario.appendChild(labelEdad);
+            formulario.appendChild(inputEdad);
+
+            // -------------------- Campo EMAIL --------------------
+            var labelEmail = document.createElement("label");
+            labelEmail.textContent = "EMAIL:";
+            labelEmail.setAttribute("for", "email");
+            var inputEmail = document.createElement("input");
+            inputEmail.setAttribute("type", "email");
+            inputEmail.setAttribute("id", "email");
+            inputEmail.setAttribute("name", "email");
+            formulario.appendChild(labelEmail);
+            formulario.appendChild(inputEmail);
+
+            // -------------------- Campo SEXO --------------------
+            var labelSexo = document.createElement("label");
+            labelSexo.textContent = "SEXO:";
+            labelSexo.className = "sexo-label";
+            formulario.appendChild(labelSexo);
+
+            var sexoOpciones = document.createElement("div");
+            sexoOpciones.className = "sexo-opciones";
+
+            var inputMasculino = document.createElement("input");
+            inputMasculino.setAttribute("type", "checkbox");
+            inputMasculino.setAttribute("id", "masculino");
+            inputMasculino.setAttribute("name", "sexo");
+            inputMasculino.setAttribute("value", "masculino");
+            var labelMasculinoTexto = document.createElement("label");
+            labelMasculinoTexto.textContent = "Masculino";
+            labelMasculinoTexto.setAttribute("for", "masculino");
+            sexoOpciones.appendChild(inputMasculino);
+            sexoOpciones.appendChild(labelMasculinoTexto);
+
+            var inputFemenino = document.createElement("input");
+            inputFemenino.setAttribute("type", "checkbox");
+            inputFemenino.setAttribute("id", "femenino");
+            inputFemenino.setAttribute("name", "sexo");
+            inputFemenino.setAttribute("value", "femenino");
+            var labelFemeninoTexto = document.createElement("label");
+            labelFemeninoTexto.textContent = "Femenino";
+            labelFemeninoTexto.setAttribute("for", "femenino");
+            sexoOpciones.appendChild(inputFemenino);
+            sexoOpciones.appendChild(labelFemeninoTexto);
+
+            formulario.appendChild(sexoOpciones);
+
+            // -------------------- Campo PROFESIÓN (ListBox/Select) --------------------
+            var labelProfesion = document.createElement("label");
+            labelProfesion.textContent = "PROFESIÓN:";
+            labelProfesion.setAttribute("for", "profesion");
+            var selectProfesion = document.createElement("select");
+            selectProfesion.setAttribute("id", "profesion");
+            selectProfesion.setAttribute("name", "profesion");
+
+            var opcionesProfesion = ["Ingeniero", "Médico", "Abogado", "Profesor", "Otro"];
+            opcionesProfesion.forEach(function(profesion) {
+                var opcion = document.createElement("option");
+                opcion.value = profesion.toLowerCase().replace(" ", "_"); // Valor para el envío
+                opcion.textContent = profesion;
+                selectProfesion.appendChild(opcion);
+            });
+            formulario.appendChild(labelProfesion);
+            formulario.appendChild(selectProfesion);
+
+            // -------------------- Botón de Enviar --------------------
+            var botonEnviar = document.createElement("button");
+            botonEnviar.setAttribute("type", "submit");
+            botonEnviar.textContent = "Enviar";
+            formulario.appendChild(botonEnviar);
+
+            // Adjuntar form al body
+            document.body.appendChild(formulario);
+        }
+
+        function crearelemento(){
+
+            // Crear el párrafo
+            var parrafo = document.createElement("p");
+            parrafo.innerHTML = "este parrafo esta creado con el pto dom☠️";
+
+            // Crear el título h1
+            var titulo = document.createElement("h1");
+            titulo.innerHTML = "este es el mejor titulo creado con el puto dom ☠️👌";
+
+            //colocar img
+            var imagen = document.createElement("img");
+            imagen.src = "imagenes/epdom.png";
+            imagen.alt = "aqui presentamos al puto dom en persona ";
+            imagen.width = 800;
+
+            // Adjuntar los elementos al body
+            document.body.appendChild(titulo);
+            document.body.appendChild(parrafo);
+            document.body.appendChild(imagen);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="crearelemento()">crear el elemento </button>
+    <button onclick="crearFormulario()"> crear formulario</button>
+</body>
+</html>

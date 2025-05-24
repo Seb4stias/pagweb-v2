@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba</title>
+    <link rel="icon" href="link img">
+</head>
+<body>
+    <style>
+
+        body{
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        header{
+            background-color: aqua;
+            color:purple ;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav{
+            margin-top: 20px;
+        }
+        nav a{
+            margin-top: 0 15px;
+            color: purple;
+            text-decoration: none;
+        }
+
+        .banner{
+            background-color: purple;
+            text-align: center;
+            padding: 0;
+        }
+
+        .servicios, .nosotros, .contacto{
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+            border: 1px solid aqua;
+        }
+
+        .formulario{
+            display:flex ;
+            flex-direction:column ;
+            max-width: 400px;
+            margin: auto;
+        }
+        .formulario input, .formulario textarea{
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid purple;
+        }
+
+        .container{
+            display: flex;
+            flex-wrap:wrap ;
+            justify-content: center;
+        }
+
+        .item{
+            width: 50%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    </style>
+    
+</body>
+
+<header>
+    <img src="foto-logo" alt="ServiPlus logo" width="200">
+    <nav>
+        <a href="#servicios">Servicios</a>>
+        <a href="#nosotros">Nosotros</a>>
+        <a href="#contacto">contacto</a>>
+    </nav>
+</header>
+
+<div class="Banner">
+    <h1>Bienvenidos a serviPlass</h1>
+    <p>ofrecemos una infinidad de cosas</p>
+</div>
+<hr>
+<br>
+<section id="servicios" class="servicios">
+    <h2>Servicios</h2>
+    <ul>
+
+    </ul>  
+    <div class="container">
+        <div class="item">
+            <li><strong>Electricidad</strong>the best service of electric on country</li>
+            <img src="electricPhotho" alt="foto electrica" width="300">
+        </div>
+
+        <div class="item">
+            <li><strong>agua potable</strong>the best potable water in your comunity</li>
+            <img src="fotodeagua" alt="foto de nuestro servicio de agua" width="300">
+        </div>
+
+        <div class="item">
+            <li><strong>mejor servicios de transporte</strong> transporte de transporte>
+            <img src="foto de transporte" alt="foto transporte" width="300">
+        </div>
+
+        <div class="item">
+            <li><strong>reciclaje</strong>mejor sistema de reciclaje </li>
+            <img src="img de reciclaje" alt=" nuestro sistema de reciclaje" width="300">
+        </div>
+
+        <div class="item">
+            <li><strong>conectividad</strong>nuestra red de conectividad</li>
+            <img src="imgconect" alt="nuestra red de conectividad" width="300">
+        </div>   
+        
+        <div class="item">
+            <li><strong>nuestros tecnicos</strong>nuestro equipo de tecnicos altamente capacitado</li>
+            <img src="imgtecnicos" alt="nuestros tecnicos" width="300">
+        </div>
+    </div>  
+</section>
+
+<hr>
+<br>
+
+<section id=" nosotros" class="nosotros">
+    <h2>nosotros</h2>
+    <p> este es el equipo de ing y tecnicos que tenemos para tu disposicion 24/7</p>
+
+    <img src="imgtec2" alt="imagenes de nuestros tecnicos" width="300">
+    <br>
+    <p>el equipo de tecnicos que tenemos</p>
+
+    <img src="imgtec3" alt="nuestro equipo de tecnicos " width="300">
+    <br>
+    <p>nuestros tecnicos</p>
+
+    <img src="imgtec4" alt="nuestros tecnicos" width="300">
+    <br>
+    <p>nuestros tecnicos</p>
+    
+    <img src="imgtec5" alt="nuestros tecnicos" width="300">
+    <br>
+    <p>nuestro equipo de TECnicos</p>
+
+
+</section>
+<hr>
+<br>
+
+<section id="contacto" class="contacto">
+<h2>contactanos</h2>
+<p>contactenos por cualquier cosa xd</p>
+    <form class="formulario">
+        <label for="nombre">nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="alfredo " required>
+
+        <label for="correo">correo electronico:</label>
+        <input type="email" id="correo" name="correo" placeholder="example01@gmail.com" required>
+    
+        <label for="mensaje">mensaje:</label>
+        <input  id="mensaje" name="mensaje" placeholder="ingrese su comentario para la empresa" required>
+
+        <button type="submit">enviar</button>
+    </form>
+
+
+<hr>
+<h2>Nuestras redes sociales</h2>
+    <div class="icons">
+        <h3>nuestro correo= elcrisesgei@gmail</h3>
+        <h3>nuestro lugar fisico</h3>
+        <a href="https://www.youtube.com/watch?v=Ca2LSI2LapU&list=RDkCIRrW3Mfhk&index=11"><img src="maps" alt="nuestro lugar fisico" width="30"></a>
+        <a href="https://www.instagram.com/crishe12/"><img src="nuestroig" alt="elcrisselacome" width="30"></a>
+        <a href="https://www.instagram.com/direct/t/105170850998010/"><img src="igbelmar" alt="el ig del bryan" width="30"></a>
+    </div>
+</section>
+
+
+</html>

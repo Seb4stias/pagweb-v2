@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion del DOM</title>
+</head>
+<body>
+    <h1 id="bla"> ¡hola, Front end!</h1>
+    <h1 id="bla"> como estan chavales </h1>
+
+    <button id="cambiarbtn">cambiar texto </button>
+
+    <script>
+        var titulos = document.getElementById('bla');
+        var cambiarbtn = document.getElementById('cambiarbtn');
+
+        cambiarbtn.addEventListener('click', function() {
+            if (titulos.length >= 2) {
+                titulos[0].textContent = 'chao front end';
+                titulos[1].textContent = 'que te importa';
+            } else {
+                console.warn("No se encontraron suficientes elementos <h1> en el documento.");
+            }
+        });
+    </script>
+</body>
+</html>
+

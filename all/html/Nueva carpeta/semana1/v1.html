@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function cambiarTitulos(){
+    var TitulosElements = document.getElementsByClassName("titulos");
+
+    for(var i=0;i <TitulosElements.length; i++){
+        TitulosElements[i].innerHTML="Nuevo Titulo" + (i+1);
+
+    }
+
+}
+
+    </script>
+    
+</body>
+
+<H1 class="titulos">titulo 1</H1>
+<H1 class="titulos">titulo 2</H1>
+<H1 class="titulos">titulo 3</H1>
+<button onclick="cambiarTitulos()">cambiar titulos</button>
+</html>
+

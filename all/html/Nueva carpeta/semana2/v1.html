@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion del DOM</title>
+</head>
+<body>
+    <h1 id="titulo1"> ¡hola, Front end!</h1>
+    <h1 id="titulo2"> como estan chavales </h1>
+    <h1 id="titulo3">kou te quiero</h1>
+
+    <button id="cambiarbtn">cambiar texto </button>
+   
+
+    <script>
+        var titulo1 = document.getElementById('titulo1');
+        var titulo2 = document.getElementById('titulo2');
+        var titulo3 = document.getElementById('titulo3');
+        var cambiarbtn = document.getElementById('cambiarbtn');
+
+        cambiarbtn.addEventListener('click',function(){
+        titulo1.textContent ='chao front end';
+        titulo2.textContent ='que te importa';
+        titulo3.textContent ='e velda';
+
+        const item = document.getElementsByClassName("item");
+        console.log(items[0]);
+        console.log(item.length);
+        });
+    </script>
+
+
+
+  
+</body>
+</html>

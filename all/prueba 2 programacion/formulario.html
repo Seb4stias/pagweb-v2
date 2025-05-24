@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario Dinámico</title>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  #formularioContenedor {
+    display: none; /* Ocultar el contenedor del formulario inicialmente */
+    margin-top: 20px;
+  }
+  #enviarFormulario {
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<button id="mostrarFormulario">Mostrar Formulario</button>
+
+<div id="formularioContenedor">
+</div>
+
+<script>
+  const mostrarBoton = document.getElementById('mostrarFormulario');
+  const formularioContenedor = document.getElementById('formularioContenedor');
+
+  mostrarBoton.addEventListener('click', () => {
+    // Crear la tabla principal
+    const table = document.createElement('table');
+
+    // Datos de las filas y tipos de entrada
+    const formData = [
+      { label: 'Nombre:', type: 'text' },
+      { label: 'RUT', type: 'text' },
+      { label: 'EDAD', type: 'number' },
+      { label: 'EMAIL', type: 'text' },
+      { label: 'SEXO', type: 'checkbox' },
+      { label: 'PROFESIÓN', type: 'listbox', options: ['Ingeniero', 'Doctor', 'Abogado', 'Profesor'] }
+    ];
+
+    // Crear las filas de la tabla
+    formData.forEach(item => {
+      const row = table.insertRow();
+      const labelCell = row.insertCell();
+      labelCell.textContent = item.label;
+
+      const inputCell = row.insertCell();
+
+      if (item.type === 'text' || item.type === 'number') {
+        const input = document.createElement('input');
+        input.type = item.type;
+        inputCell.appendChild(input);
+      } else if (item.type === 'checkbox') {
+        const masculinoLabel = document.createElement('label');
+        const masculinoCheckbox = document.createElement('input');
+        masculinoCheckbox.type = 'checkbox';
+        masculinoLabel.appendChild(masculinoCheckbox);
+        masculinoLabel.appendChild(document.createTextNode('Masculino'));
+        inputCell.appendChild(masculinoLabel);
+
+        const femeninoLabel = document.createElement('label');
+        const femeninoCheckbox = document.createElement('input');
+        femeninoCheckbox.type = 'checkbox';
+        femeninoLabel.appendChild(femeninoCheckbox);
+        femeninoLabel.appendChild(document.createTextNode('Femenino'));
+        inputCell.appendChild(femeninoLabel);
+      } else if (item.type === 'listbox') {
+        const select = document.createElement('select');
+        item.options.forEach(optionText => {
+          const option = document.createElement('option');
+          option.value = optionText;
+          option.textContent = optionText;
+          select.appendChild(option);
+        });
+        inputCell.appendChild(select);
+      }
+    });
+
+    // Agregar la tabla al contenedor
+    formularioContenedor.appendChild(table);
+
+    // Crear el botón de enviar
+    const enviarBoton = document.createElement('button');
+    enviarBoton.textContent = 'Enviar';
+    enviarBoton.id = 'enviarFormulario'; // Le asignamos un ID para poder referenciarlo si es necesario
+
+    // Agregar el botón de enviar al contenedor
+    formularioContenedor.appendChild(enviarBoton);
+
+    // Mostrar el contenedor del formulario
+    formularioContenedor.style.display = 'block';
+
+    // Ocultar el botón de mostrar formulario (opcional)
+    mostrarBoton.style.display = 'none';
+
+    // Agregar un evento de escucha al botón de enviar (puedes personalizar la acción aquí)
+    enviarBoton.addEventListener('click', () => {
+      alert('¡Formulario enviado!'); // Por ahora, solo mostramos una alerta
+      // Aquí podrías agregar la lógica para recopilar los datos del formulario y enviarlos.
+    });
+  });
+</script>
+
+</body>
+</html>

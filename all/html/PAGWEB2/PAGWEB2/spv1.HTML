@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiPlus </title>
+    <link rel="icon" href="fotos/spl3,1.png">
+</head>
+<body>
+
+
+    <style> 
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding:0;
+        }
+
+        header{
+            background-color:#6391bf;
+            color:#34495E;
+            text-align: center;
+            padding:1px ;
+
+        }
+
+        nav{
+            margin-top: 20px;
+            
+        }
+    
+        nav a{
+            margin: 0 15px;
+            color:black;
+            text-decoration: none;
+        }
+
+        .banner{
+            background-color:#bf63bf;
+            text-align: center;
+            padding: 20px;
+        }
+        .servicios, .nosotros, .contacto{
+            background-color: cadetblue;
+            margin: 0;
+            padding:0;
+            border: 1px solid cadetblue;
+        }
+
+        .formulario{
+        display: flex;
+        flex-direction:column ;
+        max-width: 400px;
+        margin:auto ;  
+        }
+
+        .formulario input, .formulario textarea{
+            margin:10px 0 ;
+            padding:10px ;
+            border:1px solid whitesmoke ;
+        }
+        .container {
+            display: flex; /*para crear un contenedor flexible y responsivo*/
+            flex-wrap: wrap;/*si no queda espacio lo ajusta en si*/
+            justify-content: center; /*para centrar de manera horizontal */
+        }
+        .item {
+            width: 50%; /*ancho */
+            text-align: center; /*centrar foto e imagen */
+            box-sizing: border-box; /**/
+            padding: 10px;/*relleno de 10px*/
+        }
+
+    
+    </style>  
+
+
+</body>
+
+<header>
+    <img scr="  fotos/spl3,1.png" alt="ServiPlus" width="200">
+    <nav>
+       <a href="#servicios">Servicios</a>>
+       <a href="#nosotros">Nosotros</a>>    
+       <a href="#contacto">Contacto</a>> 
+    </nav>
+</header>
+
+<div class="banner">
+    <h1>Bienvenidos a ServiPlus</h1>
+    <p> Ofrecemos los mejores servicios escenciales para tu hogar </p>
+</div>
+
+<hr>
+
+<section id="servicios" class="servicios">
+    <h2>Servicios</h2>
+    <ul>
+       
+    </ul>
+    <div class="container">
+        <div class="item">
+            <li><strong>Agua potable:</strong> El mejor suministro de agua para tu hogar.</li>
+              <img src="fotos/agua.png" alt="Nuestro equipo" width="300">
+        </div>
+    
+        <div class="item">
+            <li><strong>Electricidad:</strong> Las mejores instalaciones electricas y suministro electrico para ti.</li>
+            <img src="fotos/electrico.png" alt="Nuestro equipo" width="300">
+        </div>
+    
+        <div class="item">
+            <li><strong>Transporte:</strong> El mejor servicio de transporte para tu familia</li>
+            <img src="fotos/motos.png" alt="Nuestro equipo" width="300">
+        </div>
+    
+        <div class="item">
+            <li><strong>reciclaje :</strong>Reciclar nunca será tan facil como en nuestra compañia</li>
+            <img src="fotos/reci.png" alt="Nuestro equipo" width="300">
+        </div>
+    
+        <div class="item">
+            <li><strong>Conectividad:</strong> Cobertura total en todo chile con nuestro internet</li>
+            <img src="fotos/internet.png" alt="Nuestro equipo" width="300">
+        </div>
+    
+        <div class="item">
+            <li><strong>Mantenimiento:</strong> El mejor mantenimiento nunca antes proporcionado, con atencion 18h diarias.</li>
+            <img src="fotos/tecnicos.png" alt="Nuestro equipo" width="300">
+        </div>
+      </div>
+</section>
+
+<hr>
+
+<section id="nosotros" class="nosotros">
+    <h2>Nosotros</h2>
+    <p>Este es el equipo de ServiPlus, el equipo  que les brindara tranquilidad y confianza a la hora de contratar alguno de nuestros servicios<br>
+        el equipo que cada familia chilena necesita para su hogar.
+    </p>
+    
+        <img src="fotos/equipo.png" alt="Nuestro equipo" width="300">
+        <br>
+        <p>el equipo que  les tiene atencion al cliente 24/7, el equipo que siempre los atendera con una sonrisa</p>
+        <br>
+        <img src="fotos/team2.png" alt="Nuestro equipo" width="300">
+        <br>
+        <p>el equipo que mantendra  sus servicios en optimas condiciones</p>
+        <br>
+        <img src="fotos/equipo3.png" alt="Nuestro equipo" width="300">
+        <br>
+
+</section>
+<hr>
+
+<section id="contacto" class="contacto">
+<h2>Contacto</h2>
+<form class="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Alfredo" required>
+        
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo"placeholder="example01@gmail.com" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"placeholder="ingrese su comentario sobre nosotros" required></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+
+
+
+<hr>   
+    <h2>Nuestras redes sociales</h2>
+    <div class="icons">
+        <h3>nuesrto correo  = supponrt@serviplus.com</h3>
+        <h3> nuestro lugar fisico </h3>
+        <a href="https://www.google.com/maps/place/Oc%C3%A9ano+Pac%C3%ADfico/@-8.0653798,-149.2396034,3z/data=!3m1!4b1!4m6!3m5!1s0x76ed042c30f318eb:0x8eff14a070876cbc!8m2!3d-8.783195!4d-124.508523!16zL20vMDVyZ2w?entry=ttu&g_ep=EgoyMDI1MDMzMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"><img src="Maps" alt="Maps" width="30"></a>
+        <a href="https://facebook.com"><img src="facebook.svg" alt="Facebook" width="30"></a>
+        <a href="https://twitter.com"><img src="twitter.svg" alt="Twitter" width="30"></a>
+        <a href="https://instagram.com"><img src="instagram.svg" alt="Instagram" width="30"></a>
+    </div>
+</section>
+
+
+
+
+</html>

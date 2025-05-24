@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector múltiple</title>
+    <style>
+        .mi-elemento{
+            color: blue;
+            font-weight:bold;
+        }
+        .otro-estilo{
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function cambiarEstiloMultiple(){
+            // Selecciona todos los elementos que tienen la clase "mi-elemento"
+            var elementos = document.querySelectorAll(".mi-elemento");
+
+            // Itera sobre la lista de elementos y aplica los cambios de estilo a cada uno
+            elementos.forEach(function(elemento) {
+                elemento.style.color = "red";
+                elemento.style.fontWeight = "normal";
+                elemento.style.fontSize = "1.2em"; // Agregamos un cambio más
+                elemento.style.fontFamily = "Arial, sans-serif"; // cambiar el estilo de letra
+                
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <p class="mi-elemento">Este es el primer párrafo.</p>
+    <div class="mi-elemento">Este es un div con texto.</div>
+    <span class="mi-elemento">Esto es un span.</span>
+    <h2 class="mi-elemento">Este es un subtítulo.</h2>
+    <p class="mi-elemento">Este es el segundo párrafo.</p>
+
+    
+
+    <button onclick="cambiarEstiloMultiple()">Cambiar Estilo de Todos</button>
+    
+</body>
+</html>

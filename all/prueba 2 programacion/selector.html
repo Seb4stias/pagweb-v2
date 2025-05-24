@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+        .mi-elemento{
+            color: blue;
+            font-weight:bold;
+        }
+    </style>
+    <script>
+        function cambiarEstiloMultiple(){
+            //seleccionar elemento por su selector
+            var elemento = document.querySelectorAll(".mi-elemento");
+
+            //modificar el estilo del elemento 
+            elemento.style.color = "red";
+            elemento.style.fontweight="normal";
+        }
+    </script>
+</head>
+<body>
+    
+    <p class="mi-elemento"> Este es un parrafo de ejemplo.</p>
+
+    <h1 class="mi-elemento"> este es un  titulo de ejemplo.</h1>
+
+    <button onclick="cambiarEstilo()">Cambiar Estilo</button>
+</body>
+</html>

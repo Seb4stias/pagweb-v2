@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo getclass</title>
+
+    <script>
+        function cambiarTitulo(){
+            var titulosElementos = document.getElementsByClassName("titulo");
+
+            for (var i=0; i < titulosElementos.length; i++){
+                titulosElementos[i].innerHTML = "nuevo titulo" + (i+1);
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="titulo"> titulo 1 </h1>
+    <h1 class="titulo"> titulo 2 </h1>
+    <h1 class="titulo"> titulo 3 </h1>
+
+    <button onclick="cambiarTitulo()"> Cambiar Titulo</button>
+</body>
+</html>

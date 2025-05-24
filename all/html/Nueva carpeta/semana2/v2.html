@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo get noseque</title>
+
+    <script>
+        function cambiartitulos() {
+            var titulosElements = document.getElementsByClassName("titulo");
+            for (var i = 0; i < titulosElements.length; i++){
+                titulosElements[i].innerHTML = "nuevo titulo" + (i+1);
+                titulosElements[i].innerHTML="hola persona  " + (i+1);
+            }
+
+
+            }
+
+            function cambiarestilos(){
+                var elementos = document.querySelectorAll(".mi-elemento");
+
+                elementos.forEach(function(elementos) {
+                    elementos.style.color="red";
+                    elementos.style.fontweight="normal";   
+                })
+        }
+    </script>
+    
+<style>
+    .mi-elemento {
+        color:black;
+        font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+    <h1 class="titulo mi-elemento" >baba</h1>
+    <h1 class="titulo mi-elemento" >seba</h1>
+    <h1 class="titulo mi-elemento" > wilson</h1>
+
+    <button onclick="cambiartitulos()">cambiar titulos</button>
+    <button onclick="cambiarestilos()">cambiar estilos</button>
+</body>
+</html>
