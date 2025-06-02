@@ -1,0 +1,1 @@
+se le agrego el  unirse, con correo  y toda la vaina, además de que después muestra los datos debajo.  falta entender como funciona
