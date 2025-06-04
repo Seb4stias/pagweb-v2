@@ -1,0 +1,114 @@
+¡Claro! Vamos a desglosar tu código HTML, CSS y JavaScript para que entiendas cada parte de tu aplicación web "Mujeres Stem Simplificado".
+
+I. Archivo HTML (index.html)
+El HTML es la estructura de tu página web, como el esqueleto del cuerpo humano. Define el contenido y su organización.
+
+<!DOCTYPE html> y <html lang="es">: Declara el tipo de documento como HTML5 y especifica que el idioma principal de la página es el español.
+
+<head>: Contiene metadatos sobre la página que no son visibles directamente en el navegador, pero son cruciales para su funcionamiento y SEO.
+
+<meta charset="UTF-8">: Asegura la correcta visualización de caracteres especiales (como acentos y la ñ).
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Esencial para el diseño responsivo. Le dice al navegador cómo escalar la página en diferentes dispositivos (celulares, tablets).
+<title>Mujeres Stem Simplificado</title>: El texto que aparece en la pestaña del navegador.
+<link rel="stylesheet" href="style.css">: Vincula tu archivo HTML con tu archivo CSS (style.css), aplicando los estilos visuales a la página.
+<body>: Contiene todo el contenido visible de tu página web.
+
+<header id="main-header">: La cabecera principal de la página.
+<nav>: La barra de navegación.
+<a href="#inicio" class="logo">Mujeres Stem</a>: El logo de tu sitio, que también funciona como un enlace al inicio.
+<ul class="nav-links">: Una lista desordenada para los enlaces de navegación. Cada <li> contiene un <a> que te lleva a diferentes secciones de la página (#inicio, #quienes-somos, #contacto, #proyectos). El * en "Otra*" en los criterios se cumple con "Proyectos".
+<section class="hero" id="inicio">: La sección de bienvenida o "hero".
+<div class="hero-content">: Contiene el título principal, una descripción del club, una imagen (<img src="...">) y un botón "Únete a nosotros" (<a href="#contacto" class="cta-button" id="botonUnirse">).
+<section class="quienes-somos-section" id="quienes-somos">: La sección "Quiénes Somos".
+Contiene un título, párrafos descriptivos y una lista (<ul>) de "Nuestros pilares", mostrando los puntos clave de la comunidad.
+<section class="contact-section" id="contacto">: La sección de "Contacto y Registro".
+Aquí presentas la problemática a resolver y cómo tu aplicación web la soluciona mediante otra lista (<ul>).
+<div id="formularioContenedor"></div>: Este div es un espacio vacío que será llenado dinámicamente con tu formulario de registro usando JavaScript.
+<section class="proyectos-section" id="proyectos">: Tu sección "Otra*", dedicada a "Nuestros Proyectos Destacados".
+<div class="project-grid">: Organiza visualmente las "tarjetas de proyecto".
+<table class="simple-table">: Contiene una tabla con información sobre "Próximos Webinars", mostrando cómo usar tablas para organizar datos.
+<section id="datosIngresadosSection" class="data-display-section">: Otra sección vacía que será usada por JavaScript para mostrar los datos de los usuarios registrados en una tabla.
+<footer>: El pie de página, que contiene la información de derechos de autor.
+<script src="script.js"></script>: Vincula tu archivo HTML con tu archivo JavaScript (script.js). Es crucial que esté al final del <body> para asegurar que todo el HTML se haya cargado antes de que el JavaScript intente interactuar con él.
+II. Archivo CSS (style.css)
+El CSS es el diseño y la estética de tu página. Piensa en él como la ropa y el maquillaje del cuerpo.
+
+* { margin: 0; padding: 0; box-sizing: border-box; }: Un "reset" básico que elimina márgenes y rellenos predeterminados de todos los elementos y asegura que el padding y border no aumenten el tamaño total de los elementos.
+Estilos Globales (body, .container): Define la fuente, el color de texto base y un ancho máximo para el contenido (.container) para que la página no se vea demasiado ancha en pantallas grandes.
+Header y Navegación (#main-header, nav, .logo, .nav-links):
+Estilos para el fondo del encabezado, el color del texto, y cómo se alinean y separan los elementos de navegación.
+Define el estilo de los enlaces de navegación, incluyendo un efecto hover que cambia el color de fondo al pasar el ratón.
+Secciones (.hero, .quienes-somos-section, .contact-section, .proyectos-section, .data-display-section):
+Cada sección tiene estilos para su fondo, relleno, alineación de texto y el tamaño de los títulos (h1, h2, h3).
+.hero-image: Asegura que la imagen de la sección hero sea responsiva (max-width: 80%; height: auto;).
+Listas (ul, li): Estilos específicos para las listas en "Quiénes Somos" y "Contacto", incluyendo el uso de guiones (::before) en la sección de contacto.
+Formulario (#formularioContenedor, input, select, button, .error-message):
+Estilos para el contenedor del formulario, sus campos de entrada (texto, números, email, select), radio buttons y checkboxes.
+.error-message: Define el estilo de los mensajes de error (color rojo, tamaño de fuente pequeño).
+Botón de envío (button): Define su color, relleno y efecto hover.
+Tablas (.simple-table, .datos-ingresados-table):
+Estilos generales para las tablas, incluyendo bordes, relleno de celdas, colores de encabezado (th) y filas alternas (nth-child(even)).
+Footer (footer): Estilos para el pie de página.
+Media Queries (@media (max-width: 768px)): Esta es la clave del diseño responsivo. Cuando el ancho de la pantalla es igual o menor a 768 píxeles:
+Los enlaces de navegación (.nav-links) se apilan verticalmente (flex-direction: column).
+La navegación (nav) también se apila verticalmente.
+La imagen del hero se hace más grande (max-width: 100%).
+Las tarjetas de proyecto (.project-grid) se muestran en una sola columna.
+Las celdas de la tabla del formulario (#formularioContenedor td) se convierten en bloques para que cada etiqueta y campo ocupe su propia línea, mejorando la legibilidad en móviles.
+III. Archivo JavaScript (script.js)
+El JavaScript es la interactividad y la lógica de tu aplicación. Es lo que hace que tu página responda a las acciones del usuario, manipule el contenido y valide datos.
+
+document.addEventListener('DOMContentLoaded', () => { ... });: Este es el punto de entrada de todo tu JavaScript. Asegura que el código se ejecute solo cuando todo el HTML de la página se ha cargado y analizado, evitando errores al intentar acceder a elementos que aún no existen.
+const todosLosDatos = [];: Un arreglo global. Actúa como una "base de datos" temporal en el navegador para almacenar los objetos de datos de cada usuario que se registra.
+setupNavbar() (Función):
+Propósito: Permite el scroll suave cuando haces clic en los enlaces de la barra de navegación.
+Funcionamiento: Selecciona todos los enlaces de la navegación (.nav-links a). Para cada enlace, añade un "event listener" (escuchador de eventos) que detecta el clic. Cuando se hace clic, previene el comportamiento predeterminado del enlace (que te haría saltar instantáneamente) y usa scrollIntoView({ behavior: 'smooth' }) para una transición animada hacia la sección correspondiente.
+generarFormulario() (Función):
+Propósito: Crea el formulario de registro dinámicamente en el DOM. Esto cumple con el requisito de "modificar el DOM en base a una problemática" (la necesidad de un punto de registro).
+Funcionamiento:
+Obtiene el div con ID formularioContenedor.
+Crea un elemento <form> y le asigna un ID.
+Usa innerHTML para insertar todo el código HTML de la tabla con los campos del formulario. Incluye los 6 tipos de campos requeridos: text (nombre, rut), number (edad), email, select (profesión/listbox), date (fecha automática), checkbox (términos). También añade radio buttons para el sexo.
+Establece la fecha actual automáticamente en el campo fechaRegistro utilizando new Date().toISOString().slice(0, 10).
+Añade el form creado al formularioContenedor.
+Añade un event listener al formulario para llamar a manejarEnvioFormulario cuando se envíe.
+validarFormulario() (Función):
+Propósito: Realiza la validación de todos los campos del formulario. Esto cumple con el requisito de "validar los formularios HTML".
+Funcionamiento:
+Maneja una bandera isValid que inicialmente es true. Si alguna validación falla, se convierte en false.
+Usa una función auxiliar mostrarError para simplificar la visualización u ocultación de mensajes de error debajo de cada campo.
+Realiza validaciones específicas para cada campo:
+Nombre: Verifica que no esté vacío.
+RUT: Verifica que no esté vacío y que cumpla con un patrón de expresión regular básico para RUT chilenos.
+Edad: Verifica que sea un número y esté en el rango de 18 a 99.
+Email: Verifica que contenga @ y termine con @gmail.com.
+Sexo: Verifica que se haya seleccionado al menos una opción de radio button.
+Profesión: Verifica que se haya seleccionado una opción válida del select (no la opción por defecto vacía).
+Términos y Condiciones: Verifica que el checkbox esté marcado.
+Si alguna validación falla, establece isValid en false y muestra el mensaje de error correspondiente. Si es válido, limpia el mensaje de error.
+Retorna el valor final de isValid.
+manejarEnvioFormulario(event) (Función):
+Propósito: Se ejecuta cuando el formulario se envía, gestionando el proceso de recopilación y almacenamiento de datos.
+Funcionamiento:
+event.preventDefault(): Evita que el navegador recargue la página, lo que es el comportamiento predeterminado de un formulario.
+Llama a validarFormulario(). Si retorna false (hay errores), muestra una alerta y detiene la ejecución.
+Recopila los datos: Crea un objeto nuevosDatos con las propiedades (nombre, rut, etc.) y sus valores correspondientes obtenidos de los campos del formulario. Esto cumple con el requisito de "utiliza objetos con Javascript".
+Almacena los datos: Añade el objeto nuevosDatos al arreglo global todosLosDatos usando push(). Esto cumple con el requisito de "utiliza arreglos con Javascript".
+Llama a renderizarDatos() para actualizar la tabla de registros visible para el usuario.
+Muestra un alert de éxito.
+Oculta el formulario (formularioContenedor.innerHTML = '';) y vuelve a mostrar el botón "Únete a nosotros", preparando la interfaz para un posible nuevo registro.
+renderizarDatos() (Función):
+Propósito: Genera y muestra una tabla HTML con todos los registros guardados en el arreglo todosLosDatos. Esto cumple nuevamente con la "modificación del DOM" y la "resolución del problema" al visualizar los datos de los miembros.
+Funcionamiento:
+Obtiene la sección donde se mostrarán los datos (datosIngresadosSection).
+Limpia cualquier contenido anterior de la sección.
+Si no hay datos en todosLosDatos, oculta la sección.
+Si hay datos, asegura que la sección sea visible.
+Crea un título <h2> y un elemento <table> con la clase datos-ingresados-table.
+Crea una fila de encabezado (<th>) con los nombres de las columnas.
+Itera sobre cada dataItem (objeto de usuario) en el arreglo todosLosDatos. Por cada objeto, crea una nueva fila (<tr>) y celdas (<td>) para cada una de sus propiedades, insertando el texto del dato.
+Finalmente, añade la tabla completa a datosIngresadosSection.
+Lógica de Inicialización:
+setupNavbar(): Se llama al inicio para configurar la navegación.
+El botón "Únete a nosotros" (botonUnirse) tiene un event listener: cuando se hace clic, oculta el botón y llama a generarFormulario() para mostrar el formulario dinámicamente.
+renderizarDatos(): Se llama al inicio para mostrar cualquier dato que ya pudiera estar en el arreglo (aunque en este caso estará vacío al cargar la página por primera vez, pero es una buena práctica si se usara almacenamiento persistente).
